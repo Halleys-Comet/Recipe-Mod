@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% if title %}
-        <title>Recipe Blog - {{ title }}</title>
-    {% else %}
-        <title>Recipe blog</title>
-    {% endif %}     
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-</head>
-   
-<body>
+{% extends "recipe_collective/base.html" %}
+{% block content %}
     <h1>About Page</h1>
-</body>
-</html>
+{% endblock content %}
+
