@@ -24,3 +24,6 @@ def home(request):
 
 def about(request):
     return render(request, 'recipe_collective/about.html', {'title': 'About'})
+
+def login(request):
+    return render(request, 'recipe_collective/login.html', {'title': 'Login'})
