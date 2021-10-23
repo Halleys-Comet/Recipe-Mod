@@ -1,25 +1,22 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Recipe
 
-posts = [
+recipe = [
     {
-        'author': 'John', 
-        'title': 'post',
-        'content': 'first', 
-        'date_posted': 'today'
-    },
-    {
-        'author': 'john1',
-        'title': 'post1',
-        'content': 'first1', 
-        'date_posted': 'today1'
+        'author': 'john', 
+        'title': 'beef',
+        'content': 'beef',
+        'date_posted': 'October 22nd, 2021'
     }
 ]
 
+
 def home(request):
     context = {
-        'posts': posts
+        'recipe': Recipe.objects.all()
     }
+
     return render(request, 'recipe_collective/home.html', context)
 
 def about(request):
